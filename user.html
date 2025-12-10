@@ -74,7 +74,7 @@
         <div class="timer-container"><div id="timerBar" class="timer-bar"></div></div>
         
         <div style="display:flex; justify-content:space-between; margin-bottom:15px; color:#6b7280; font-size:0.9rem;">
-            <span>Time: <b id="timerText">6</b>s</span>
+            <span>Time: <b id="timerText">10</b>s</span>
             <span>Question: <b id="currentQ">1</b> / <b id="totalQ">10</b></span>
         </div>
 
@@ -121,7 +121,7 @@
     let qIndex = 0;
     let score = 0;
     let timerRef = null;
-    let timeLeft = 6;
+    let timeLeft = 10;
     let isRegister = false;
 
     // --- DOM HELPERS ---
@@ -262,7 +262,7 @@
     }
 
     function startTimer() {
-        timeLeft = 6;
+        timeLeft = 10;
         document.getElementById('timerText').innerText = timeLeft;
         document.getElementById('timerBar').style.width = "100%";
         
@@ -270,7 +270,7 @@
         timerRef = setInterval(() => {
             timeLeft--;
             document.getElementById('timerText').innerText = timeLeft;
-            document.getElementById('timerBar').style.width = (timeLeft / 6 * 100) + "%";
+            document.getElementById('timerBar').style.width = (timeLeft / 10 * 100) + "%";
 
             if(timeLeft <= 0) {
                 clearInterval(timerRef);
